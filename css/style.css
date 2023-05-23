@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Oswald&display=swap');
+
+/* reset */
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns:(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+    width: 100%;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+
+/* titulo */
+
+h2{
+    padding-left: 10px;
+    font-family:'Oswald';
+    font-size: 30px;
+
+
+}
+
+.box{
+    font-family: 'Alex Brush', cursive;
+    color:rgb(37, 30, 30);
+    font-size: 80px;
+    padding-top: 150px;
+    padding-left: 90px;
+    padding-bottom: 0%;
+    margin: 0%;
+
+}
+.parrafo{
+    font-size: 30px;
+    margin:0px;
+    padding-left: 170px;
+}
+
+/* menu de navegacion */
+ul{
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    
+}
+.menu li{
+    padding: 0px;
+    margin: 0px;
+}
+
+.logoo{
+    margin: 0%;
+    padding-top: 0%;
+    padding-left: 0%;
+    width: 100px;
+}
+
+/* 
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-style: solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: rgba(247, 247, 87, 0.411);
+    padding: 0px;
+    background-color: white;
+   
+
+} */
+
+ nav ul li{
+    list-style: none;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+nav ul li :hover{
+    border-bottom: 2px solid rgba(247, 247, 87, 0.822);
+    border-radius: 2px;
+}
+/* 
+.menu{
+    display: flex;
+    justify-content:space-around;
+    gap: 160px;
+} */
+
+a{
+    font-family: 'Oswald';
+    text-decoration: none;
+    color:rgb(37, 30, 30);
+}
+
+/* fin del navegador */
+
+main{
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+
+.pagos{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: auto;
+    grid-template-areas:
+     " bank coin credit wallet";
+    padding: 200px;
+    padding-right: 250px;
+    
+}
+
+.bi bi-cash-coin{
+    grid-area: coin;
+}
+
+.bi bi-bank{
+    grid-area: bank;
+}
+
+.bi bi-credit-card{
+    grid-area: credit;
+}
+
+.bi bi-wallet{
+    grid-area: wallet;
+}
+
+
+
+
+
+p{
+    font-family: 'Oswald';
+    font-size: 25px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+.body{
+    background-image: url(../multimedia/donaa3.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.ppp{
+    padding-bottom: 200px;
+    background-image: url(../multimedia/muffinss.jpg);
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* formulario de contacto*/
+form{
+    text-align: center;
+    padding: 30px;
+    border-color: black;
+
+/* pie de pagina */
+}
+ footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px;
+    margin: 0px;
+    border: 2px;
+    border-radius: 2px;
+    border-color: blue;
+    background-color: rgb(230, 202, 78);
+}
+
+
+
+#formulario{
+    font-weight: bold;
+}
+
+
+ #mapa{
+    text-align: center;
+}
+
+#logo{
+    width: 100px;
+    padding: 0%;
+    margin: 5%;
+    border: 0%;
+}
+#pago{
+    width: max-content;
+    padding: 100px;
+    margin: 0%;}
+
+
+
+
+/* grilla de productos */
+     .productos{
+        display: grid;
+        gap: 100px;
+        justify-content: space-around;
+        grid-template-columns:300px 300px 300px;
+        grid-template-rows: auto;
+        
+    }
+
+    .producto img{
+        margin: 0%;
+        padding: 0px;
+        width: 290px;
+        height: 290px;
+        align-items: center;
+        object-fit: cover;
+        border-radius: 10%;
+        box-shadow: 1px 1px 1px 1px rgb(102, 101, 101);
+        transition: 1s;
+    }
+
+    .productos :hover{
+        width: 300px;
+        height: 300px;
+    }
+
+
+/* mediaqueries*/
+/* mobile */
+
+ @media(max-width:480px){
+    .menu{
+        flex-direction: column;
+    }
+    
+    .box{
+        font-size: 40px;
+        padding-left: 30px;
+    }
+
+    .parrafo{
+        font-size: 20px;
+        padding-left: 30px;
+    }
+
+.productos{
+    grid-template-columns:300px;
+}
+
+h2{
+    text-align: start;
+}
+
+
+.body{
+    background-size:contain;
+}
+
+.ppp{
+    padding-bottom: 100px;
+    background-size: contain;
+}
+
+#direccion{
+    width: 300px;
+    height: 200px;
+    padding-bottom: 20px;
+}
+
+.pagos{
+    grid-template-columns: 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+     " bank"
+      "coin"
+      "credit"
+      "wallet";
+    padding: 10px;
+    padding-left: 150px;
+    gap: 20px;
+}
+
+} 
+
+
+
+
+
+
+
+
+
+
+
